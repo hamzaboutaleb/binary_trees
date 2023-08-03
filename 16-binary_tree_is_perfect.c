@@ -60,7 +60,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 
 	is_full = binary_tree_is_full(tree);
-	is_same_height = tree_height(tree->right) == tree_height(tree->left);
+	is_same_height = tree_height(tree->right) - 1 == tree_height(tree->left) - 1;
 	if (is_full && is_same_height)
 		return (1);
 	return (0);
